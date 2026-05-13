@@ -7,7 +7,35 @@
 <title>Red Sea Premium | Yacht & Diving Egypt</title>
 
 <meta name="description" content="Premium yacht tours, diving and photo diving in Sharm El Sheikh, Egypt.">
+.gallery {
+  padding: 60px 20px;
+  background: #04142b;
+}
 
+.gallery h2 {
+  color: white;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
 <style>
 
 *{
@@ -404,6 +432,25 @@ Telegram
 </a>
 
 </div>
+ <div class="gallery-grid">
+    <img src="/gallery/reef1.jpg">
+    <img src="/gallery/reef2.jpg">
+    <img src="/gallery/reef3.jpg">
+    <img src="/gallery/reef4.jpg">
+    <img src="/gallery/reef5.jpg">
+    <img src="/gallery/reef6.jpg">
+    <img src="/gallery/reef7.jpg">
+    <img src="/gallery/reef8.jpg">
 
+    <img src="/gallery/yacht1.jpg">
+    <img src="/gallery/yacht2.jpg">
+
+    <img src="/gallery/sea1.jpg">
+    <img src="/gallery/sea2.jpg">
+
+    <img src="/gallery/boat1.jpg">
+    <img src="/gallery/boat2.jpg">
+  </div>
+</section>
 </body>
 </html>
