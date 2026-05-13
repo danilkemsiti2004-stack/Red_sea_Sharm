@@ -3,53 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Red Sea Sharm</title>
+
+<title>Red Sea Premium | Yacht & Diving Egypt</title>
+
+<meta name="description" content="Premium yacht tours, diving and photo diving in Sharm El Sheikh, Egypt.">
 
 <style>
-body{
+
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
-background:#0f172a;
+}
+
+body{
+background:#08111f;
 color:white;
+line-height:1.6;
 }
 
 header{
-padding:80px 20px;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
-background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop') center/cover;
+padding:40px 20px;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
 }
 
-header h1{
-font-size:60px;
-margin:0;
+.hero{
+max-width:900px;
 }
 
-header p{
-font-size:22px;
-margin-top:20px;
+.hero h1{
+font-size:70px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:24px;
+color:#dbeafe;
+margin-bottom:35px;
+}
+
+.buttons{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 34px;
+border-radius:14px;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+transition:.3s;
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+.telegram{
+background:#229ED9;
+color:white;
+}
+
+.btn:hover{
+transform:scale(1.05);
 }
 
 .section{
-padding:60px 20px;
+padding:80px 20px;
 max-width:1200px;
 margin:auto;
 }
 
+.section-title{
+font-size:42px;
+margin-bottom:20px;
+text-align:center;
+}
+
+.section-sub{
+text-align:center;
+color:#cbd5e1;
+margin-bottom:50px;
+}
+
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-margin-top:40px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .card{
-background:#111827;
-padding:30px;
-border-radius:20px;
+background:#111c2e;
+padding:35px;
+border-radius:24px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card h3{
-margin-top:0;
+margin-bottom:15px;
+font-size:28px;
 }
 
 .gallery{
@@ -60,69 +130,203 @@ gap:20px;
 
 .gallery img{
 width:100%;
-border-radius:20px;
-height:300px;
+height:320px;
 object-fit:cover;
+border-radius:24px;
 }
 
 .contact{
-background:#111827;
-padding:40px;
+background:#111c2e;
+padding:50px;
 border-radius:30px;
+text-align:center;
+}
+
+.contact p{
+margin:15px 0;
+font-size:20px;
+}
+
+form{
+margin-top:40px;
+display:grid;
+gap:20px;
+}
+
+input,textarea{
+padding:18px;
+border:none;
+border-radius:14px;
+font-size:16px;
+}
+
+button{
+padding:18px;
+border:none;
+border-radius:14px;
+background:#0ea5e9;
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
 }
 
 footer{
+padding:40px 20px;
 text-align:center;
-padding:30px;
 color:#94a3b8;
 }
+
+.lang{
+position:fixed;
+top:20px;
+right:20px;
+display:flex;
+gap:10px;
+z-index:1000;
+}
+
+.lang button{
+padding:10px 15px;
+border-radius:10px;
+border:none;
+background:white;
+color:black;
+font-weight:bold;
+cursor:pointer;
+}
+
+.mobile-bar{
+position:fixed;
+bottom:15px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:15px;
+z-index:1000;
+}
+
+.mobile-bar a{
+padding:16px 22px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+color:white;
+}
+
+.mobile-wa{
+background:#25D366;
+}
+
+.mobile-tg{
+background:#229ED9;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section-title{
+font-size:34px;
+}
+
+.contact{
+padding:30px 20px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
+<div class="lang">
+<button>RU</button>
+<button>EN</button>
+<button>AR</button>
+</div>
+
 <header>
-<h1>Red Sea Sharm</h1>
+
+<div class="hero">
+
+<h1>Red Sea Premium</h1>
+
 <p>
 Премиальные морские прогулки, дайвинг и фотодайвинг в Египте
 </p>
 
 <p>
-Premium yacht tours, diving and photo diving in Egypt
+Premium yacht tours, diving & photo diving in Egypt
 </p>
+
+<div class="buttons">
+
+<a class="btn whatsapp"
+href="https://wa.me/201004718985">
+WhatsApp Booking
+</a>
+
+<a class="btn telegram"
+href="https://t.me/redseasharm">
+Telegram
+</a>
+
+</div>
+
+</div>
+
 </header>
 
 <section class="section">
-<h2>Наши услуги / Services</h2>
+
+<h2 class="section-title">
+Наши услуги / Services
+</h2>
+
+<p class="section-sub">
+Sharm El Sheikh • Egypt • Red Sea
+</p>
 
 <div class="cards">
 
 <div class="card">
-<h3>🛥️ Морские прогулки</h3>
+<h3>🛥️ Yacht Tours</h3>
 <p>
-Индивидуальные и групповые туры на яхте по Красному морю.
+Премиальные морские прогулки и яхтенные туры по Красному морю.
 </p>
 </div>
 
 <div class="card">
-<h3>🤿 Дайвинг</h3>
+<h3>🤿 Diving</h3>
 <p>
 Организация дайвинга и сопровождение клиентов.
 </p>
 </div>
 
 <div class="card">
-<h3>📸 Фотодайвинг</h3>
+<h3>📸 Photo Diving</h3>
 <p>
 Подводная фото и видеосъемка.
 </p>
 </div>
 
 </div>
+
 </section>
 
 <section class="section">
-<h2>Gallery</h2>
+
+<h2 class="section-title">
+Gallery
+</h2>
 
 <div class="gallery">
 
@@ -132,48 +336,74 @@ Premium yacht tours, diving and photo diving in Egypt
 
 <img src="https://images.unsplash.com/photo-1560275619-4662e36fa65c?q=80&w=1200&auto=format&fit=crop">
 
+<img src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?q=80&w=1200&auto=format&fit=crop">
+
 </div>
+
 </section>
 
 <section class="section">
+
 <div class="contact">
 
-<h2>Контакты / Contacts</h2>
+<h2 class="section-title">
+Бронирование / Booking
+</h2>
+
+<p>
+WhatsApp: +20 100 471 8985
+</p>
 
 <p>
 Telegram: @redseasharm
 </p>
 
 <p>
-<a href="https://wa.me/201004718985" 
-style="
-display:inline-block;
-padding:15px 30px;
-background:#25D366;
-color:white;
-text-decoration:none;
-border-radius:12px;
-font-weight:bold;
-margin-top:10px;
-">
-Забронировать в WhatsApp
-</a>
+Email: danilkemsiti2004@gmail.com
 </p>
 
 <p>
-Sharm El-Sheikh, Egypt
+Sharm El Sheikh, Egypt
 </p>
 
-<p>
-ИП Пешков Данил Игоревич
-</p>
+<form>
+
+<input type="text" placeholder="Ваше имя / Your Name">
+
+<input type="text" placeholder="WhatsApp / Telegram">
+
+<textarea rows="5"
+placeholder="Комментарий / Comment"></textarea>
+
+<button>
+Отправить заявку / Send Request
+</button>
+
+</form>
 
 </div>
+
 </section>
 
 <footer>
-© 2026 Red Sea Sharm
+
+© 2026 Red Sea Premium
+
 </footer>
+
+<div class="mobile-bar">
+
+<a class="mobile-wa"
+href="https://wa.me/201004718985">
+WhatsApp
+</a>
+
+<a class="mobile-tg"
+href="https://t.me/redseasharm">
+Telegram
+</a>
+
+</div>
 
 </body>
 </html>
